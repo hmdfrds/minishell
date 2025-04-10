@@ -16,6 +16,8 @@ while True:
             break
 
         try:
+            # check = false so the error happen while running the command don't close the program.
+            # shell = true to use the system shell (cmd.exe) for execution.
             subprocess.run(args, check=False, shell=True)
         except FileNotFoundError:
             print(f"minishell: command not found: {args[0]}")
